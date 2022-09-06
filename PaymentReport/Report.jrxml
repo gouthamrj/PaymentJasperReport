@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.0.final using JasperReports Library version 6.20.0-2bc7ab61c56f459e8176eb05c7705e145cd400ad  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="PaymentSummary" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="561ade04-37dc-4a50-8561-d7e49a650cee">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="title" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="numericCode" class="java.lang.long"/>
+	<field name="user" class="java.lang.String"/>
+	<field name="userName" class="java.lang.String"/>
+	<field name="address" class="java.lang.String"/>
+	<field name="state" class="java.lang.String"/>
+	<field name="country" class="java.lang.String"/>
+	<field name="tax_vat_Number" class="java.lang.Double"/>
+	<field name="fromDate" class="java.lang.String"/>
+	<field name="toDate" class="java.lang.String"/>
+	<field name="fileGeneratedDate" class="java.lang.String"/>
+	<field name="type" class="java.lang.String"/>
+	<field name="typeDate" class="java.lang.String"/>
+	<field name="currency" class="java.lang.String"/>
+	<field name="netDueType" class="java.lang.String"/>
+	<field name="netDueAgent" class="java.lang.Double"/>
+	<field name="grandTotal" class="java.lang.Double"/>
+	<background>
+		<band height="10" splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="207" splitType="Stretch">
+			<rectangle>
+				<reportElement x="-11" y="0" width="578" height="170" isRemoveLineWhenBlank="true" uuid="18b462be-fc5c-4e7c-af76-23ad9cdddf92"/>
+			</rectangle>
+			<textField>
+				<reportElement x="215" y="10" width="140" height="20" uuid="f2dce332-1a4d-4851-acc0-a494a72b7a43">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="SansSerif" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{title}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="430" y="30" width="40" height="20" uuid="9f457c76-692d-4a43-8dcf-b77e1b8b7ecc"/>
+				<text><![CDATA[PAGE:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="430" y="10" width="40" height="20" uuid="f2b29b0c-49c7-4911-8538-dc822e7fd8d8"/>
+				<text><![CDATA[DATE:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="230" y="40" width="70" height="20" uuid="d7615e61-2f59-4f2c-93ce-024367ca60d8"/>
+				<text><![CDATA[CURRENCY:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="170" y="121" width="90" height="20" uuid="33f60f3a-2009-43b9-b29d-1d2b026893c8"/>
+				<text><![CDATA[BILLING PERIOD:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="10" width="155" height="20" uuid="169ab58f-6348-4fe1-b536-1cb8203e2051">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font fontName="SansSerif" size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[IATA CARGO ACCOUNT SETTLEMENT - ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="260" y="118" width="50" height="20" uuid="08b25c14-6a15-4ab0-81fb-d196a0f8b49a">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{fromDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="321" y="118" width="50" height="20" uuid="85de347f-1924-495c-baab-f3e41f654ce9">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{toDate}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="310" y="118" width="11" height="20" uuid="43f99735-203c-4d8f-9db9-b28a87814f8a">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="510" y="118" width="40" height="20" uuid="9e4781ed-ba27-4aca-92e0-2b555fde6f03"/>
+				<textFieldExpression><![CDATA[$F{typeDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="30" width="50" height="16" uuid="c612e63c-0019-4744-b30b-3368ac4ff6f2">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{user}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="46" width="180" height="16" uuid="a52def49-aa29-46fe-84b8-dde52fc5d443">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{userName}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="60" width="180" height="16" uuid="7db3228b-d1c6-4e5f-9a54-2f8f4e0aa0aa">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{address}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="95" width="50" height="16" uuid="6a43e481-d59a-4f61-9f80-612216a56d0c">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{country}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="77" width="50" height="16" uuid="9c181123-683d-4bc6-975d-ed287f75aa09">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{state}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="110" y="122" width="50" height="17" uuid="1d25bd59-4328-469e-994b-cf6ffd056134">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{numericCode}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="110" y="140" width="50" height="17" uuid="335e174b-565c-4d89-ac5c-e499321aaac1">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{tax_vat_Number}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="124" width="110" height="15" uuid="f241ab9a-4ff0-43a2-a062-2aafb156057c">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<text><![CDATA[IATA NUMERIC CODE:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="140" width="110" height="17" uuid="a8ac09bb-6b76-4792-91c9-aa3ce277b24c">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<text><![CDATA[TAX/VAT NUMBER:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="290" y="40" width="50" height="17" uuid="13478e45-51a2-4cfd-886e-5436d80e5893">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{currency}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="470" y="9" width="50" height="21" uuid="f56bed21-78e7-4ead-b0f6-c03082bddb3a"/>
+				<textFieldExpression><![CDATA[$F{fileGeneratedDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="400" y="118" width="100" height="20" uuid="7a9852d2-7a72-4261-ab06-1d81b67f0a8c">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{type}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="155" y="10" width="45" height="16" uuid="737d4824-1dc9-4234-8731-e381f2f6b6c6">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{country}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="500" y="118" width="11" height="20" uuid="68fad240-52d1-4975-96d1-b8f87a6a5564">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<text><![CDATA[-]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="470" y="30" width="40" height="20" uuid="a5fca7d0-ecc4-4249-84f6-f1bc0491fc09">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<text><![CDATA[ 1]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<summary>
+		<band height="217" splitType="Stretch">
+			<staticText>
+				<reportElement x="20" y="10" width="521" height="21" uuid="ac7dac41-1585-4849-b51d-2fc5aae2e205"/>
+				<textElement textAlignment="Left"/>
+				<text><![CDATA[Below is an Extra Summary of the Billing Statements and Invoices for the Period]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="63" width="50" height="17" uuid="233d572b-ad20-46b4-9f34-bc02366298a3"/>
+				<text><![CDATA[Net Due-]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="375" y="200" width="50" height="17" uuid="d6668bbd-6e29-4831-af7b-8d6a9fab71ad">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{grandTotal}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="380" y="60" width="90" height="20" uuid="e67f2531-e8e2-448a-95d2-699280b22229"/>
+				<text><![CDATA[Net Due Agent]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="220" y="63" width="100" height="17" uuid="2b98bb02-b657-4b7a-b206-cb276f48bfc8"/>
+				<text><![CDATA[Net Due Airline]]></text>
+			</staticText>
+			<line>
+				<reportElement x="220" y="180" width="100" height="1" uuid="6737b0c7-ffe0-4838-b262-a35240a5e683"/>
+			</line>
+			<staticText>
+				<reportElement x="25" y="200" width="85" height="17" uuid="688a3da7-15be-4d89-b9d9-bd088f6ce59e"/>
+				<text><![CDATA[Grand Total]]></text>
+			</staticText>
+			<line>
+				<reportElement x="375" y="180" width="100" height="1" uuid="4012ba95-c970-4295-9f6e-9c6ec7d4287d"/>
+			</line>
+			<textField>
+				<reportElement x="70" y="62" width="50" height="17" uuid="ca8b24b6-1050-4d35-a244-62a1bd535116">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{netDueType}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="380" y="90" width="50" height="17" uuid="c65b3622-c4cf-4da2-b009-fee14887fe44">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{netDueAgent}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>
